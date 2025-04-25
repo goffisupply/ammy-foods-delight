@@ -25,27 +25,28 @@ const featuredItems = [
 
 const FeaturedItems = () => {
   return (
-    <section className="py-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+    <section className="py-20 bg-black text-white relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%)] bg-[length:20px_20px]" />
+      </div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4">Featured Menu Items</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4 text-gradient">Featured Menu Items</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Popular choices loved by our customers
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredItems.map((item, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
               <CardHeader>
-                <CardTitle className="font-playfair text-xl">{item.name}</CardTitle>
+                <CardTitle className="font-playfair text-xl text-white">{item.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">{item.description}</p>
+                <p className="text-gray-300 mb-4">{item.description}</p>
                 <p className="text-2xl font-bold text-primary mb-2">{item.price}</p>
-                <p className="text-sm text-gray-500 mb-4">{item.serves}</p>
-                <Button className="w-full">
+                <p className="text-sm text-gray-400 mb-4">{item.serves}</p>
+                <Button className="w-full bg-primary hover:bg-primary/90">
                   <a href="https://wa.me/09127882483" target="_blank" rel="noopener noreferrer">
                     Order Now
                   </a>
