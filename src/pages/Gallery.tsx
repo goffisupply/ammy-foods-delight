@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Gallery as GalleryIcon, ArrowRight } from "lucide-react";
+import { Image as ImageIcon, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Gallery = () => {
@@ -24,7 +24,7 @@ const Gallery = () => {
                   <div className="relative">
                     <img src={image.url} alt={image.title} className="w-full h-64 object-cover" />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <GalleryIcon className="w-12 h-12 text-white" />
+                      <ImageIcon className="w-12 h-12 text-white" />
                     </div>
                   </div>
                   <div className="p-4">
